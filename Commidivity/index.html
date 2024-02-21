@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificador de Comidas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Planificador de Comidas: Commidivity</h1>
+
+    <div id="meal-planner">
+        <div class="meal-column">
+            <h2>Lunes</h2>
+        <select id="meal-monday" onchange="updatePlan('Lunes', this.value, document.getElementById('portions-monday').value)">
+            <option value="">--Elige una comida--</option>
+            <option value="lomo-saltado">Lomo Saltado</option>
+            <option value="caldo-gallina">Caldo de Gallina</option>
+            <option value="arroz-chaufa">Arroz Chaufa</option>
+            <option value="causa-tradicional">Causa Tradicional</option>
+            <option value="palta-rellena">Palta Rellena</option>
+            <option value="salpicon-de-pollo">Salpicón de Pollo</option>
+            <option value="choritos-a-la-chalaca">Choritos a la Chalaca</option>
+            <option value="escabeche-de-pescado">Escabeche de Pescado</option>
+            <option value="pata-de-cerdo">Patitas de Cerdo</option>
+            <option value="anticuchos">Anticuchos de Corazón</option>
+            <option value="sangrecita">Sangrecita</option>
+            <option value="papa-rellena">Papa rellena</option>
+            <option value="sopa-criolla">Sopa Criolla</option>
+            <option value="sancochado-limeño">Sancochado Limeño</option>
+            <option value="menestrón">Menestrón</option>
+            <option value="caldo-de-gallina">Caldo de Gallina</option>
+            <option value="sopa-bruta-maleña">Sopa Bruta Maleña</option>
+            <option value="chupe-limeño">Chupe Limeño</option>
+            <option value="arroz-con-pollo">Arroz con Pollo</option>
+            <option value="arroz-tapado">Arroz Tapado</option>
+            <option value="arroz-pianito">Arroz Pianito</option>
+            <option value="seco-de-res">Seco de Res</option>
+            <option value="picante-de-carne">Picante de Carne</option>
+            <option value="estofado-de-res">Estofado de Res</option>
+            <option value="carapulcra">Carapulcra</option>
+            <option value="locro-de-zapallo">Locro de Zapallo</option>
+            <option value="aji-de-gallina">Ají de Gallina</option>
+            <option value="olluco-con-charqui">Olluquito con Charqui</option>
+            <option value="huatia-sulcana">Huatia Sulcana</option>
+            <option value="humitas">Humitas</option>
+            <option value="tamal-criollo">Tamal Criollo</option>
+            <option value="cau-cau">Cau Cau</option>
+            <option value="chanfainita">Chanfainita</option>
+            <option value="mondonguito-a-la-italiana">Mondonguito a la Italiana</option>
+            <option value="estofado-de-lengua">Estofado de Lengua</option>
+            <option value="patitas-al-mani">Patitas al Maní</option>
+            <option value="fritangita">Fritanguita</option>
+            <option value="lomo-saltado">Lomo Saltado</option>
+            <option value="tacu-tacu-con-sabana">Tacu Tacu con Sábana</option>
+            <option value="tallarin-saltado">Tallarín Saltado</option>
+            <option value="bisteck-a-lo-pobre">Bisteck a lo Pobre</option>
+            <option value="coliflor-saltada">Coliflor Saltada</option>
+            <option value="pescado-a-la-chorrillana">Pescado a la Chorrillana</option>
+            <option value="tallarines-rojos">Tallarines rojos</option>
+            <option value="tallarines-verdes-con-milanesa">Tallarines verdes con Milanesa</option>
+            <option value="caigua-rellena">Caigua rellena</option>
+        </select>
+        <input type="number" id="portions-monday" value="1" min="1" onchange="updatePlan('Lunes', document.getElementById('meal-monday').value, this.value)" />
+
+    </div>
+    <div class="meal-column">
+        <h2>Martes</h2>
+        <select id="meal-tuesday" onchange="updatePlan('Martes', this.value, document.getElementById('portions-tuesday').value)">
+            <option value="">--Elige una comida--</option>
+            <option value="lomo-saltado">Lomo Saltado</option>
+            <option value="caldo-gallina">Caldo de Gallina</option>
+            <option value="arroz-chaufa">Arroz Chaufa</option>
+            <option value="causa-tradicional">Causa Tradicional</option>
+            <option value="palta-rellena">Palta Rellena</option>
+            <option value="salpicon-de-pollo">Salpicón de Pollo</option>
+            <option value="choritos-a-la-chalaca">Choritos a la Chalaca</option>
+            <option value="escabeche-de-pescado">Escabeche de Pescado</option>
+            <option value="pata-de-cerdo">Patitas de Cerdo</option>
+            <option value="anticuchos">Anticuchos de Corazón</option>
+            <option value="sangrecita">Sangrecita</option>
+            <option value="papa-rellena">Papa rellena</option>
+            <option value="sopa-criolla">Sopa Criolla</option>
+            <option value="sancochado-limeño">Sancochado Limeño</option>
+            <option value="menestrón">Menestrón</option>
+            <option value="caldo-de-gallina">Caldo de Gallina</option>
+            <option value="sopa-bruta-maleña">Sopa Bruta Maleña</option>
+            <option value="chupe-limeño">Chupe Limeño</option>
+            <option value="arroz-con-pollo">Arroz con Pollo</option>
+            <option value="arroz-tapado">Arroz Tapado</option>
+            <option value="arroz-pianito">Arroz Pianito</option>
+            <option value="seco-de-res">Seco de Res</option>
+            <option value="picante-de-carne">Picante de Carne</option>
+            <option value="estofado-de-res">Estofado de Res</option>
+            <option value="carapulcra">Carapulcra</option>
+            <option value="locro-de-zapallo">Locro de Zapallo</option>
+            <option value="aji-de-gallina">Ají de Gallina</option>
+            <option value="olluco-con-charqui">Olluquito con Charqui</option>
+            <option value="huatia-sulcana">Huatia Sulcana</option>
+            <option value="humitas">Humitas</option>
+            <option value="tamal-criollo">Tamal Criollo</option>
+            <option value="cau-cau">Cau Cau</option>
+            <option value="chanfainita">Chanfainita</option>
+            <option value="mondonguito-a-la-italiana">Mondonguito a la Italiana</option>
+            <option value="estofado-de-lengua">Estofado de Lengua</option>
+            <option value="patitas-al-mani">Patitas al Maní</option>
+            <option value="fritangita">Fritanguita</option>
+            <option value="lomo-saltado">Lomo Saltado</option>
+            <option value="tacu-tacu-con-sabana">Tacu Tacu con Sábana</option>
+            <option value="tallarin-saltado">Tallarín Saltado</option>
+            <option value="bisteck-a-lo-pobre">Bisteck a lo Pobre</option>
+            <option value="coliflor-saltada">Coliflor Saltada</option>
+            <option value="pescado-a-la-chorrillana">Pescado a la Chorrillana</option>
+            <option value="tallarines-rojos">Tallarines rojos</option>
+            <option value="tallarines-verdes-con-milanesa">Tallarines verdes con Milanesa</option>
+            <option value="caigua-rellena">Caigua rellena</option>
+        </select>
+        <input type="number" id="portions-tuesday" value="1" min="1" onchange="updatePlan('Martes', document.getElementById('meal-tuesday').value, this.value)" />
+
+    </div>
+    <div class="meal-column">
+        <h2>Miércoles</h2>
+        <select id="meal-wednesday" onchange="updatePlan('Miércoles', this.value, document.getElementById('portions-wednesday').value)">
+            <option value="">--Elige una comida--</option>
+            <option value="lomo-saltado">Lomo Saltado</option>
+            <option value="caldo-gallina">Caldo de Gallina</option>
+            <option value="arroz-chaufa">Arroz Chaufa</option>
+            <option value="causa-tradicional">Causa Tradicional</option>
+            <option value="palta-rellena">Palta Rellena</option>
+            <option value="salpicon-de-pollo">Salpicón de Pollo</option>
+            <option value="choritos-a-la-chalaca">Choritos a la Chalaca</option>
+            <option value="escabeche-de-pescado">Escabeche de Pescado</option>
+            <option value="pata-de-cerdo">Patitas de Cerdo</option>
+            <option value="anticuchos">Anticuchos de Corazón</option>
+            <option value="sangrecita">Sangrecita</option>
+            <option value="papa-rellena">Papa rellena</option>
+            <option value="sopa-criolla">Sopa Criolla</option>
+            <option value="sancochado-limeño">Sancochado Limeño</option>
+            <option value="menestrón">Menestrón</option>
+            <option value="caldo-de-gallina">Caldo de Gallina</option>
+            <option value="sopa-bruta-maleña">Sopa Bruta Maleña</option>
+            <option value="chupe-limeño">Chupe Limeño</option>
+            <option value="arroz-con-pollo">Arroz con Pollo</option>
+            <option value="arroz-tapado">Arroz Tapado</option>
+            <option value="arroz-pianito">Arroz Pianito</option>
+            <option value="seco-de-res">Seco de Res</option>
+            <option value="picante-de-carne">Picante de Carne</option>
+            <option value="estofado-de-res">Estofado de Res</option>
+            <option value="carapulcra">Carapulcra</option>
+            <option value="locro-de-zapallo">Locro de Zapallo</option>
+            <option value="aji-de-gallina">Ají de Gallina</option>
+            <option value="olluco-con-charqui">Olluquito con Charqui</option>
+            <option value="huatia-sulcana">Huatia Sulcana</option>
+            <option value="humitas">Humitas</option>
+            <option value="tamal-criollo">Tamal Criollo</option>
+            <option value="cau-cau">Cau Cau</option>
+            <option value="chanfainita">Chanfainita</option>
+            <option value="mondonguito-a-la-italiana">Mondonguito a la Italiana</option>
+            <option value="estofado-de-lengua">Estofado de Lengua</option>
+            <option value="patitas-al-mani">Patitas al Maní</option>
+            <option value="fritangita">Fritanguita</option>
+            <option value="lomo-saltado">Lomo Saltado</option>
+            <option value="tacu-tacu-con-sabana">Tacu Tacu con Sábana</option>
+            <option value="tallarin-saltado">Tallarín Saltado</option>
+            <option value="bisteck-a-lo-pobre">Bisteck a lo Pobre</option>
+            <option value="coliflor-saltada">Coliflor Saltada</option>
+            <option value="pescado-a-la-chorrillana">Pescado a la Chorrillana</option>
+            <option value="tallarines-rojos">Tallarines rojos</option>
+            <option value="tallarines-verdes-con-milanesa">Tallarines verdes con Milanesa</option>
+            <option value="caigua-rellena">Caigua rellena</option>
+        </select>
+        <input type="number" id="portions-wednesday" value="1" min="1" onchange="updatePlan('Miércoles', document.getElementById('meal-wednesday').value, this.value)" />
+
+    </div>
+    <div class="meal-column">
+        <h2>Jueves</h2>
+        <select id="meal-thursday" onchange="updatePlan('Jueves', this.value, document.getElementById('portions-thursday').value)">
+            <option value="">--Elige una comida--</option>
+            <option value="lomo-saltado">Lomo Saltado</option>
+            <option value="caldo-gallina">Caldo de Gallina</option>
+            <option value="arroz-chaufa">Arroz Chaufa</option>
+            <option value="causa-tradicional">Causa Tradicional</option>
+            <option value="palta-rellena">Palta Rellena</option>
+            <option value="salpicon-de-pollo">Salpicón de Pollo</option>
+            <option value="choritos-a-la-chalaca">Choritos a la Chalaca</option>
+            <option value="escabeche-de-pescado">Escabeche de Pescado</option>
+            <option value="pata-de-cerdo">Patitas de Cerdo</option>
+            <option value="anticuchos">Anticuchos de Corazón</option>
+            <option value="sangrecita">Sangrecita</option>
+            <option value="papa-rellena">Papa rellena</option>
+            <option value="sopa-criolla">Sopa Criolla</option>
+            <option value="sancochado-limeño">Sancochado Limeño</option>
+            <option value="menestrón">Menestrón</option>
+            <option value="caldo-de-gallina">Caldo de Gallina</option>
+            <option value="sopa-bruta-maleña">Sopa Bruta Maleña</option>
+            <option value="chupe-limeño">Chupe Limeño</option>
+            <option value="arroz-con-pollo">Arroz con Pollo</option>
+            <option value="arroz-tapado">Arroz Tapado</option>
+            <option value="arroz-pianito">Arroz Pianito</option>
+            <option value="seco-de-res">Seco de Res</option>
+            <option value="picante-de-carne">Picante de Carne</option>
+            <option value="estofado-de-res">Estofado de Res</option>
+            <option value="carapulcra">Carapulcra</option>
+            <option value="locro-de-zapallo">Locro de Zapallo</option>
+            <option value="aji-de-gallina">Ají de Gallina</option>
+            <option value="olluco-con-charqui">Olluquito con Charqui</option>
+            <option value="huatia-sulcana">Huatia Sulcana</option>
+            <option value="humitas">Humitas</option>
+            <option value="tamal-criollo">Tamal Criollo</option>
+            <option value="cau-cau">Cau Cau</option>
+            <option value="chanfainita">Chanfainita</option>
+            <option value="mondonguito-a-la-italiana">Mondonguito a la Italiana</option>
+            <option value="estofado-de-lengua">Estofado de Lengua</option>
+            <option value="patitas-al-mani">Patitas al Maní</option>
+            <option value="fritangita">Fritanguita</option>
+            <option value="lomo-saltado">Lomo Saltado</option>
+            <option value="tacu-tacu-con-sabana">Tacu Tacu con Sábana</option>
+            <option value="tallarin-saltado">Tallarín Saltado</option>
+            <option value="bisteck-a-lo-pobre">Bisteck a lo Pobre</option>
+            <option value="coliflor-saltada">Coliflor Saltada</option>
+            <option value="pescado-a-la-chorrillana">Pescado a la Chorrillana</option>
+            <option value="tallarines-rojos">Tallarines rojos</option>
+            <option value="tallarines-verdes-con-milanesa">Tallarines verdes con Milanesa</option>
+            <option value="caigua-rellena">Caigua rellena</option>
+        </select>
+        <input type="number" id="portions-thursday" value="1" min="1" onchange="updatePlan('Jueves', document.getElementById('meal-thursday').value, this.value)" />
+
+    </div>
+    <div class="meal-column">
+        <h2>Viernes</h2>
+        <select id="meal-friday" onchange="updatePlan('Viernes', this.value, document.getElementById('portions-friday').value)">
+            <option value="">--Elige una comida--</option>
+            <option value="lomo-saltado">Lomo Saltado</option>
+            <option value="caldo-gallina">Caldo de Gallina</option>
+            <option value="arroz-chaufa">Arroz Chaufa</option>
+            <option value="causa-tradicional">Causa Tradicional</option>
+            <option value="palta-rellena">Palta Rellena</option>
+            <option value="salpicon-de-pollo">Salpicón de Pollo</option>
+            <option value="choritos-a-la-chalaca">Choritos a la Chalaca</option>
+            <option value="escabeche-de-pescado">Escabeche de Pescado</option>
+            <option value="pata-de-cerdo">Patitas de Cerdo</option>
+            <option value="anticuchos">Anticuchos de Corazón</option>
+            <option value="sangrecita">Sangrecita</option>
+            <option value="papa-rellena">Papa rellena</option>
+            <option value="sopa-criolla">Sopa Criolla</option>
+            <option value="sancochado-limeño">Sancochado Limeño</option>
+            <option value="menestrón">Menestrón</option>
+            <option value="caldo-de-gallina">Caldo de Gallina</option>
+            <option value="sopa-bruta-maleña">Sopa Bruta Maleña</option>
+            <option value="chupe-limeño">Chupe Limeño</option>
+            <option value="arroz-con-pollo">Arroz con Pollo</option>
+            <option value="arroz-tapado">Arroz Tapado</option>
+            <option value="arroz-pianito">Arroz Pianito</option>
+            <option value="seco-de-res">Seco de Res</option>
+            <option value="picante-de-carne">Picante de Carne</option>
+            <option value="estofado-de-res">Estofado de Res</option>
+            <option value="carapulcra">Carapulcra</option>
+            <option value="locro-de-zapallo">Locro de Zapallo</option>
+            <option value="aji-de-gallina">Ají de Gallina</option>
+            <option value="olluco-con-charqui">Olluquito con Charqui</option>
+            <option value="huatia-sulcana">Huatia Sulcana</option>
+            <option value="humitas">Humitas</option>
+            <option value="tamal-criollo">Tamal Criollo</option>
+            <option value="cau-cau">Cau Cau</option>
+            <option value="chanfainita">Chanfainita</option>
+            <option value="mondonguito-a-la-italiana">Mondonguito a la Italiana</option>
+            <option value="estofado-de-lengua">Estofado de Lengua</option>
+            <option value="patitas-al-mani">Patitas al Maní</option>
+            <option value="fritangita">Fritanguita</option>
+            <option value="lomo-saltado">Lomo Saltado</option>
+            <option value="tacu-tacu-con-sabana">Tacu Tacu con Sábana</option>
+            <option value="tallarin-saltado">Tallarín Saltado</option>
+            <option value="bisteck-a-lo-pobre">Bisteck a lo Pobre</option>
+            <option value="coliflor-saltada">Coliflor Saltada</option>
+            <option value="pescado-a-la-chorrillana">Pescado a la Chorrillana</option>
+            <option value="tallarines-rojos">Tallarines rojos</option>
+            <option value="tallarines-verdes-con-milanesa">Tallarines verdes con Milanesa</option>
+            <option value="caigua-rellena">Caigua rellena</option>
+        </select>
+        <input type="number" id="portions-friday" value="1" min="1" onchange="updatePlan('Viernes', document.getElementById('meal-friday').value, this.value)" />
+
+    </div>
+    <div class="meal-column">
+        <h2>Sábado</h2>
+        <select id="meal-saturday" onchange="updatePlan('Sábado', this.value, document.getElementById('portions-saturday').value)">
+            <option value="">--Elige una comida--</option>
+            <option value="lomo-saltado">Lomo Saltado</option>
+            <option value="caldo-gallina">Caldo de Gallina</option>
+            <option value="arroz-chaufa">Arroz Chaufa</option>
+            <option value="causa-tradicional">Causa Tradicional</option>
+            <option value="palta-rellena">Palta Rellena</option>
+            <option value="salpicon-de-pollo">Salpicón de Pollo</option>
+            <option value="choritos-a-la-chalaca">Choritos a la Chalaca</option>
+            <option value="escabeche-de-pescado">Escabeche de Pescado</option>
+            <option value="pata-de-cerdo">Patitas de Cerdo</option>
+            <option value="anticuchos">Anticuchos de Corazón</option>
+            <option value="sangrecita">Sangrecita</option>
+            <option value="papa-rellena">Papa rellena</option>
+            <option value="sopa-criolla">Sopa Criolla</option>
+            <option value="sancochado-limeño">Sancochado Limeño</option>
+            <option value="menestrón">Menestrón</option>
+            <option value="caldo-de-gallina">Caldo de Gallina</option>
+            <option value="sopa-bruta-maleña">Sopa Bruta Maleña</option>
+            <option value="chupe-limeño">Chupe Limeño</option>
+            <option value="arroz-con-pollo">Arroz con Pollo</option>
+            <option value="arroz-tapado">Arroz Tapado</option>
+            <option value="arroz-pianito">Arroz Pianito</option>
+            <option value="seco-de-res">Seco de Res</option>
+            <option value="picante-de-carne">Picante de Carne</option>
+            <option value="estofado-de-res">Estofado de Res</option>
+            <option value="carapulcra">Carapulcra</option>
+            <option value="locro-de-zapallo">Locro de Zapallo</option>
+            <option value="aji-de-gallina">Ají de Gallina</option>
+            <option value="olluco-con-charqui">Olluquito con Charqui</option>
+            <option value="huatia-sulcana">Huatia Sulcana</option>
+            <option value="humitas">Humitas</option>
+            <option value="tamal-criollo">Tamal Criollo</option>
+            <option value="cau-cau">Cau Cau</option>
+            <option value="chanfainita">Chanfainita</option>
+            <option value="mondonguito-a-la-italiana">Mondonguito a la Italiana</option>
+            <option value="estofado-de-lengua">Estofado de Lengua</option>
+            <option value="patitas-al-mani">Patitas al Maní</option>
+            <option value="fritangita">Fritanguita</option>
+            <option value="lomo-saltado">Lomo Saltado</option>
+            <option value="tacu-tacu-con-sabana">Tacu Tacu con Sábana</option>
+            <option value="tallarin-saltado">Tallarín Saltado</option>
+            <option value="bisteck-a-lo-pobre">Bisteck a lo Pobre</option>
+            <option value="coliflor-saltada">Coliflor Saltada</option>
+            <option value="pescado-a-la-chorrillana">Pescado a la Chorrillana</option>
+            <option value="tallarines-rojos">Tallarines rojos</option>
+            <option value="tallarines-verdes-con-milanesa">Tallarines verdes con Milanesa</option>
+            <option value="caigua-rellena">Caigua rellena</option>
+        </select>
+        <input type="number" id="portions-saturday" value="1" min="1" onchange="updatePlan('Sábado', document.getElementById('meal-saturday').value, this.value)" />
+
+    </div>
+    <div class="meal-column">
+        <h2>Domingo</h2>
+        <select id="meal-sunday" onchange="updatePlan('Domingo', this.value, document.getElementById('portions-sunday').value)">
+            <option value="">--Elige una comida--</option>
+            <option value="lomo-saltado">Lomo Saltado</option>
+            <option value="caldo-gallina">Caldo de Gallina</option>
+            <option value="arroz-chaufa">Arroz Chaufa</option>
+            <option value="causa-tradicional">Causa Tradicional</option>
+            <option value="palta-rellena">Palta Rellena</option>
+            <option value="salpicon-de-pollo">Salpicón de Pollo</option>
+            <option value="choritos-a-la-chalaca">Choritos a la Chalaca</option>
+            <option value="escabeche-de-pescado">Escabeche de Pescado</option>
+            <option value="pata-de-cerdo">Patitas de Cerdo</option>
+            <option value="anticuchos">Anticuchos de Corazón</option>
+            <option value="sangrecita">Sangrecita</option>
+            <option value="papa-rellena">Papa rellena</option>
+            <option value="sopa-criolla">Sopa Criolla</option>
+            <option value="sancochado-limeño">Sancochado Limeño</option>
+            <option value="menestrón">Menestrón</option>
+            <option value="caldo-de-gallina">Caldo de Gallina</option>
+            <option value="sopa-bruta-maleña">Sopa Bruta Maleña</option>
+            <option value="chupe-limeño">Chupe Limeño</option>
+            <option value="arroz-con-pollo">Arroz con Pollo</option>
+            <option value="arroz-tapado">Arroz Tapado</option>
+            <option value="arroz-pianito">Arroz Pianito</option>
+            <option value="seco-de-res">Seco de Res</option>
+            <option value="picante-de-carne">Picante de Carne</option>
+            <option value="estofado-de-res">Estofado de Res</option>
+            <option value="carapulcra">Carapulcra</option>
+            <option value="locro-de-zapallo">Locro de Zapallo</option>
+            <option value="aji-de-gallina">Ají de Gallina</option>
+            <option value="olluco-con-charqui">Olluquito con Charqui</option>
+            <option value="huatia-sulcana">Huatia Sulcana</option>
+            <option value="humitas">Humitas</option>
+            <option value="tamal-criollo">Tamal Criollo</option>
+            <option value="cau-cau">Cau Cau</option>
+            <option value="chanfainita">Chanfainita</option>
+            <option value="mondonguito-a-la-italiana">Mondonguito a la Italiana</option>
+            <option value="estofado-de-lengua">Estofado de Lengua</option>
+            <option value="patitas-al-mani">Patitas al Maní</option>
+            <option value="fritangita">Fritanguita</option>
+            <option value="lomo-saltado">Lomo Saltado</option>
+            <option value="tacu-tacu-con-sabana">Tacu Tacu con Sábana</option>
+            <option value="tallarin-saltado">Tallarín Saltado</option>
+            <option value="bisteck-a-lo-pobre">Bisteck a lo Pobre</option>
+            <option value="coliflor-saltada">Coliflor Saltada</option>
+            <option value="pescado-a-la-chorrillana">Pescado a la Chorrillana</option>
+            <option value="tallarines-rojos">Tallarines rojos</option>
+            <option value="tallarines-verdes-con-milanesa">Tallarines verdes con Milanesa</option>
+            <option value="caigua-rellena">Caigua rellena</option>
+        </select>
+        <input type="number" id="portions-sunday" value="1" min="1" onchange="updatePlan('Domingo', document.getElementById('meal-sunday').value, this.value)" />
+    </div>
+
+
+
+    <h2>Lista de Compras</h2>
+    <div id="grocery-list">
+        <!-- Aquí se mostrará la lista de compras generada -->
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Whatsapp floating button -->
+<a href="https://wa.me/51977571922?text=Hola!%20Este%20es%20mi%20pedido%20%C3%B1%20%F0%9F%A4%97" target="_blank" id="whatsapp-button">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50" height="50">
+</a>
+</body>
+</html>
